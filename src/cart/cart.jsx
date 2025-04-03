@@ -1,0 +1,25 @@
+import CartItem from "./cartitem";
+
+export default function Cart({ cart, removeFromCart, addToCart }) {
+  return (
+    <section className="cart">
+      <h2>Cart</h2>
+      {cart.length === 0 ? (
+        <p>Cart is empty</p>
+      ) : (
+        <>
+          <ul>
+            {cart.map((item) => (
+              <CartItem
+                key={item.id}
+                item={item}
+                addToCart={addToCart}
+                removeFroCart={removeFromCart}
+              />
+            ))}
+          </ul>
+        </>
+      )}
+    </section>
+  );
+}
