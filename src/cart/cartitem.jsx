@@ -1,4 +1,4 @@
-import CartItemQuantity from "/cartitemquanity";
+import CartItemQuantity from "./cartQuatity";
 
 export default function CartItem({ item, removeFromCart, addToCart }) {
   return (
